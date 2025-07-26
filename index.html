@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeGenie</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-eeM7RLe3Wv2HZ7Toub47POas/user-rnGwZEmjnwoUoF8lEvadvt0O/img-1Pw9834rvOp4ChlnNIAXUt65.png?st=2025-07-26T04%3A02%3A17Z&se=2025-07-26T06%3A02%3A17Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-25T16%3A24%3A05Z&ske=2025-07-26T16%3A24%3A05Z&sks=b&skv=2024-08-04&sig=bDc0UFlAJoYW8F5te2IvuIIL%2B1YZVVXq42SmxODdoPg%3D" alt="ResumeGenie Logo" class="h-12">
+            <h1 class="text-2xl font-bold text-blue-600">ResumeGenie</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="text-center">
+            <h2 class="text-3xl font-bold mb-4">Crafting Your Future, One Resume at a Time</h2>
+            <p class="text-lg mb-8">An AI-driven platform that customizes resume templates based on industry standards and individual career profiles to enhance job applications.</p>
+            <form id="resume-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div class="mb-4">
+                    <label for="career-details" class="block text-gray-700 text-sm font-bold mb-2">Career Details:</label>
+                    <textarea id="career-details" name="career-details" rows="3" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter your career details..."></textarea>
+                </div>
+                <div class="mb-6">
+                    <label for="industry" class="block text-gray-700 text-sm font-bold mb-2">Job Industry:</label>
+                    <input type="text" id="industry" name="industry" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter your job industry">
+                </div>
+                <div class="flex items-center justify-between">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Generate Resume</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="template-section" class="hidden mt-8">
+            <h3 class="text-2xl font-bold mb-4">Your Customized Resume Template</h3>
+            <div class="bg-white shadow-md rounded p-4">
+                <div id="template-content"></div>
+                <button id="download-btn" class="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Download</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2023 ResumeGenie. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
